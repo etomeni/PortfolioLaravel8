@@ -1,0 +1,8 @@
+.dasHeader nav.navbar ul li .img-thumbnail {
+    padding: unset;
+    border: unset;
+}
+
+.dasHeader nav.navbar ul li .dropdown-toggle::after {
+    display: none;
+}
