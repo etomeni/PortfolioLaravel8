@@ -6,3 +6,22 @@
 .dasHeader nav.navbar ul li .dropdown-toggle::after {
     display: none;
 }
+
+a.add-btn-outline {
+    color: #41a4f5;
+}
+.add-btn-outline:hover {
+    color: #41a4f5;
+    border-color: #41a4f5;
+}
+
+.modal.homepage .modal-header {
+    border-bottom: 0;
+}
+.modal.homepage .form-label {
+    color: #6f42c1;
+}
+
+.btn.adnewpro:hover {
+    color: white;
+}

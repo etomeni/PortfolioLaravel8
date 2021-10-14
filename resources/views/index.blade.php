@@ -118,7 +118,7 @@
 		        <div class="col-12 col-lg-4">
 					<div class="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
 						<div class="card-img-container position-relative">
-							<img class="card-img-top rounded-0" src="assets/images/projects/shuttle.png" alt="">
+							<img class="card-img-top rounded-0" src="assets/images/projects/audiomack.png" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
 								<div class="project-logo"><img class="img-fluid w-50" src="assets/images/logos/ams2.png"></div>
 							</div>

@@ -38,13 +38,10 @@ class pagesController extends Controller
         return view('contact');
     }
    
-    public function Dashboard_index(Request $request) {
-        
-        return view('dashboard.index');
-    }
     public function login() {
         return view('login');
     }
+    
     public function loginAuth(Request $request) {
         $validation = $request->validate([
             'email' => 'required|email',

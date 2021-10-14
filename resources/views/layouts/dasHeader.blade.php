@@ -32,7 +32,7 @@
                         <a class="nav-link {{ request()->is('resume') ? 'active' : '' }}" href="resume">Resume</a>
                     </li>
                     <li class="nav-item me-lg-3">
-                        <a class="nav-link {{ request()->is('new-project') ? 'active' : '' }}" href="new_project">New Project</a>
+                        <a class="nav-link {{ request()->is('new_project') ? 'active' : '' }}" href="new_project">New Project</a>
                     </li>
                    
                     <li class="nav-item dropdown me-0">

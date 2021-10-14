@@ -59,7 +59,10 @@
         <small class="copyright"> Copyright &copy; <a class="text-light text-link" href="https://wa.me/2348108786933" target="_blank">Sunday Etom Eni</a></small>
     </footer>
 
-    <!-- Javascript -->
+    <!-- jquery -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>  
+
+    <!-- bootstrap Javascript -->
     <script type="text/javascript" src="assets/js/plugins/popper.min.js"></script> 
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>  
     
@@ -68,6 +71,7 @@
 
     <!-- Custom JS -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/ajaxCode.js"></script>
     
     
 </body>

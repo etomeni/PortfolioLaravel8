@@ -26,12 +26,14 @@ Route::get('resume', [pagesController::class, 'resume']);
 Route::get('contact', [pagesController::class, 'getContact']);
 Route::post('contact', [pagesController::class, 'postContact']);
 
-Route::get('dashboard', [pagesController::class, 'Dashboard_index'])->middleware('auth');
-
 Route::get('see_login', [pagesController::class, 'login'])->name('login');
 Route::post('see_login', [pagesController::class, 'loginAuth']);
 
 Route::get('logout', [pagesController::class, 'logoutAuth']);
 
 // DASHBOARD
+Route::get('dashboard', [dashboardController::class, 'index'])->middleware('auth');
+
+Route::get('admin_home', [dashboardController::class, 'home']);
+
 Route::get('new_project', [dashboardController::class, 'new_project']);
