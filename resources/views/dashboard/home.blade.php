@@ -44,7 +44,7 @@
 									<div class="text-success"><?php //echo $errors['success']; ?></div>
 									<div class="text-danger"> <?php //echo $errors['dbError']; ?> </div>
 								</div>
-								@csrf
+								{{-- @csrf --}}
 								<div class="row g-3">                                                           
 									<div class="col-12 col-md-6">
 										<label class="sr-only" for="itext">Intro Text</label>
@@ -66,6 +66,8 @@
 										<textarea class="form-control" id="description" name="description" placeholder="Give a brief intro. description about yourself" rows="5" required aria-required="true" aria-describedby="descriptionhelp">@if (!empty(old('description'))){{ old('description') }}@endif</textarea>
 										<div id="descriptionhelp" class="form-text text-danger"> {{$errors->first('description')}} </div>
 									</div>
+
+									<input type="hidden" name="headerintro" value="headerIntro" class="hiddenInput">
 									
 									<div class="col-12">
 										<button type="submit" name="headerintro" value="headerintro" class="btn w-100 btn-primary py-2 headerIntroBTN suBTN">Save changes</button>
@@ -111,7 +113,7 @@
 											<div class="text-success"><?php //echo $errors['success']; ?></div>
 											<div class="text-danger"> <?php //echo $errors['dbError']; ?> </div>
 										</div>
-										@csrf
+										{{-- @csrf --}}
 										<div class="row g-3">                                                           
 											<div class="col-12">
 												<label class="sr-only" for="hTitle">Skills Overview [New Header]</label>
@@ -125,6 +127,8 @@
 												<div id="Skilldescriptionhelp" class="form-text text-danger"> {{$errors->first('Skilldescription')}} </div>
 											</div>
 											
+											<input type="hidden" name="SkillOverview" value="SkillOverview" class="hiddenInput">
+
 											<div class="col-12">
 												<button type="submit" name="SkillOverview" value="SkillOverview" class="btn w-100 btn-primary py-2 skillsOverViewBTN suBTN">Save changes</button>
 											</div>
@@ -241,13 +245,15 @@
 											<div class="text-success"><?php //echo $errors['success']; ?></div>
 											<div class="text-danger"> <?php //echo $errors['dbError']; ?> </div>
 										</div>
-										@csrf
+										{{-- @csrf --}}
 										<div class="row g-3">                                                           
 											<div class="col-12">
 												<label class="sr-only" for="newSkill">{New} {skill type} Skill</label>
 												<input type="text" class="form-control" id="newSkill" name="newSkill" placeholder="{New} {Frontend} Skill" minlength="3" required value="@if (!empty(old('newSkill'))){{ old('newSkill') }}@endif" aria-required="true" aria-describedby="newSkillhelp">
 												<div id="newSkillhelp" class="form-text text-danger"> {{$errors->first('newSkill')}} </div>
 											</div>
+
+											<input type="hidden" name="SubmitNewSkill" value="SubmitNewSkill" class="hiddenInput">
 											
 											<div class="col-12">
 												<button type="submit" name="SubmitNewSkill" value="SubmitNewSkill" class="btn w-100 btn-primary py-2 suBTN">Save changes</button>
@@ -399,7 +405,7 @@
 										<div class="text-success"><?php //echo $errors['success']; ?></div>
 										<div class="text-danger"> <?php //echo $errors['dbError']; ?> </div>
 									</div>
-									@csrf
+									{{-- @csrf --}}
 									<div class="row g-3">                                                           
 										
 										<div class="col-12">
@@ -442,6 +448,7 @@
 											</select>
 										</div>
 										 
+										<input type="hidden" name="selectFeaPro" value="selectFeaPro" class="hiddenInput">
 																				
 										<div class="col-12">
 											<button type="submit" name="selectFeaPro" value="selectFeaPro" class="btn w-100 btn-primary py-2 suBTN">Save changes</button>
@@ -463,7 +470,7 @@
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title w-100 text-center" id="FeaPro-Label">Add New Project</h5>
+						<h5 class="modal-title w-100 text-center" id="FeaPro-Label">Edit Project</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
@@ -476,7 +483,7 @@
 										<div class="text-success"><?php //echo $errors['success']; ?></div>
 										<div class="text-danger"> <?php //echo $errors['dbError']; ?> </div>
 									</div>
-									@csrf
+									{{-- @csrf --}}
 									<div class="row g-3">                                                           
 										<div class="col-12 col-md-6">
 											<label class="form-label" for="cname">Client Name</label>
@@ -560,6 +567,8 @@
 											<textarea class="form-control" id="p_description" name="Pdescription" placeholder="Project Description" rows="5" required aria-required="true" aria-describedby="Pdescriptionhelp">@if (!empty(old('Pdescription'))){{ old('Pdescription') }}@endif</textarea>
 											<div id="Pdescriptionhelp" class="form-text text-danger"> {{$errors->first('Pdescription')}} </div>
 										</div>
+
+										<input type="hidden" name="editFeaPro" value="editFeaPro" class="hiddenInput">
 										
 										<div class="col-12">
 											<button type="submit" name="editFeaPro" value="editFeaPro" class="btn w-100 btn-primary py-2 suBTN">Save changes</button>

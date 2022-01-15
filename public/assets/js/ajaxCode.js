@@ -9,10 +9,17 @@ $(document).ready(function () {
 			'itext': $('#itext').val(),
 			'name': $('#name').val(),
 			'propic': $('#propic').val(),
-			'description': $('#description').val()
+			'description': $('#description').val(),
+			'hiddenInput': $('.hiddenInput').val()
 		}
 
 		// console.log(subData);
+
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
 
 		$.ajax({
 			type: "POST",
@@ -20,10 +27,10 @@ $(document).ready(function () {
 			data: subData,
 			dataType: "json",
 			beforeSend: function () {
-				console.log('hello');
+				// console.log('hello');
 			},
 			success: function (response) {
-				// console.log(response);
+				console.log(response);
 				
 
 				// USE SWEET ALERT TO DISPLAY MESSAGES
@@ -47,6 +54,12 @@ $(document).ready(function () {
 
 		// console.log(subData);
 
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+
 		$.ajax({
 			type: "POST",
 			url: "/admin_home",
@@ -68,7 +81,7 @@ $(document).ready(function () {
 	});
 
 	// HEADER INTRO 
-	$(document).on('click', '.headerIntroBTN', function (e) {
+	$(document).on('click', '.headerIntrooBTN', function (e) {
 		e.preventDefault();
 		// console.log("hello");
 
@@ -81,16 +94,22 @@ $(document).ready(function () {
 
 		// console.log(subData);
 
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+
 		$.ajax({
 			type: "POST",
 			url: "/admin_home",
 			data: subData,
 			dataType: "json",
-			beforeSend: function () {
-				console.log('hello');
-			},
+			// beforeSend: function () {
+			// 	console.log('hello');
+			// },
 			success: function (response) {
-				// console.log(response);
+				console.log(response);
 				
 
 				// USE SWEET ALERT TO DISPLAY MESSAGES

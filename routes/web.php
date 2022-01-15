@@ -35,5 +35,6 @@ Route::get('logout', [pagesController::class, 'logoutAuth']);
 Route::get('dashboard', [dashboardController::class, 'index'])->middleware('auth');
 
 Route::get('admin_home', [dashboardController::class, 'home']);
+Route::post('admin_home', [dashboardController::class, 'homeAuth']);
 
 Route::get('new_project', [dashboardController::class, 'new_project']);
